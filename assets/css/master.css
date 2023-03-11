@@ -221,13 +221,15 @@ main {
 
 #products {
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
 }
 
 #products div{
-    width: 90%; 
+    text-align: center;
 }
+
 .prod-img {
     width: 90%;
     height: 400px;
@@ -235,10 +237,9 @@ main {
 }
 
 .product-buttons {
-    width: 90%;
-    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 1rem auto;
 }
 
 .product-buttons button{ 
@@ -319,16 +320,21 @@ main {
 
 #quick-view {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 50%;
+    width: 40%;
     min-height: 80%;
     background-color: #000f30ec;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 100px;
+}
+
+.product-quick-view {
+    text-align: center;
+    width: 100%;
 }
 
 .center-quick-view {
@@ -336,6 +342,7 @@ main {
     justify-content: center;
     align-items: center;
     color: white;
+    font-weight: 700;
     position: relative;
 }
 
@@ -350,7 +357,7 @@ main {
     height: 40px;
     font-size: 1.5rem;
     border-radius: 5px;
-    background-color: black;
+    background-color: var(--scrollbarColor);
     cursor: pointer;
 }
 
